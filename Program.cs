@@ -158,15 +158,14 @@ void Show2DArray (int [,] array2D)
 int [,] ArifmeticheskoyCols(int [,] array2D)
 {
     int sum = 0;
-    int [,] newArray;
     for(int j = 0; j < array2D.GetLength(1); j++) 
     {
         for(int i = 0; i < array2D.GetLength(0); i++)
         {
             sum = sum + array2D[i, j];
             sum /= array2D.GetLength(0);
-            int [,] newArray = array2D[j];
-            newArray[i, j] = sum;
+            int newArray = array2D[i, j];
+            newArray [j] = sum;
         }
        return array2D;
     }    
